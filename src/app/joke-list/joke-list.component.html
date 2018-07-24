@@ -1,0 +1,5 @@
+<div>
+	<app-form (jokeCreated)="addNewJoke($event)"></app-form>
+<app-joke *ngFor="let joke of jokeList let i =index"  [joke]="{joke:joke , i:i}" (jokeDeleted)= "deleteJokeEnd($event)"></app-joke>
+</div>
+

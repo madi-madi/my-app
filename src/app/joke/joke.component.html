@@ -1,0 +1,16 @@
+<div class="row">
+<div class=" col">
+<div class=" card">
+	<div *ngIf="joke.joke.hide" class="">
+	<p>{{joke.i +"-"+joke.joke.setup}}</p>
+	<p>{{joke.joke.punchline}}</p>
+
+
+</div>
+	<button class="btn btn-danger"  (click)="deleteJoke(joke.i)"> Delete </button>
+	
+	<button class="btn btn-info" (click)="joke.joke.toggle()">{{joke.joke.hide?'Hide':'Show'}}</button>
+</div>
+
+</div>
+</div>
