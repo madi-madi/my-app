@@ -1,0 +1,43 @@
+<div class="container">
+
+<div class="row">
+<div class=" col-12 parent">
+<div class=" card">
+	<div *ngIf="book.book.hide" class="col-12">
+<div class="row">
+		<div class="col-4 card"> 
+			<h3 class="lead text-center badge badge-info" style="padding: 6% 0%;
+			font-size:114px;">{{book.book.download}}</h3>
+		</div>	
+
+		<div class="col-8 card">
+				<h3 class="text-muted "><span class=" title float-right btn btn-outline-info">{{book.book.name}}</span></h3>
+			<p><span class="badge badge-secondary float-right ">{{book.book.url}}</span></p>
+			<hr/>
+			<div class="col-12">
+		<div class="row">
+		<div class="col-6">
+	<button type="button" class="btn btn-primary col-12 "  (click)="downloadBook(book.i)"> Download </button>
+</div>
+		<div class="col-6">
+
+	<button type="button" class="btn btn-danger col-12 "  (click)="returnBook(book.i)"> Return  </button>
+</div>
+</div>
+			</div>
+
+			<hr/>
+
+		</div>	
+	</div>
+
+
+
+</div>
+	<!-- <button class="btn btn-danger"  (click)="downloadBook(book.i)"> Delete </button> -->
+	
+	<!-- <button class="btn btn-info" (click)="book.book.toggle()">{{book.book.hide?'Hide':'Show'}}</button> -->
+</div>
+
+</div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container">
+	<h1> Add New Book </h1>
+<div  class="form-group">
+	<input type="text" placeholder="Name or Title Book" class="form-control" #name>
+</div>
+<div class="form-group">
+	<input type="url" placeholder="http://example.com" class="form-control" #url>
+</div>
+
+<button (click)="addBook(name.value , url.value)" class="btn btn-success"
+style="margin-bottom: 55px;"> Add</button>
+
+<br>
+</div>
+<!--  <div class="container">
+
+    <h1> Add New Book </h1>
+    <form  #myForm="ngForm">
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"
+               required
+                name="name"
+                #namebook
+               >
+        </div>
+
+	    <div class="form-group">
+        <label for="url">url</label>
+        <input type="text" class="form-control" id="url"
+               required
+                url="url"
+                #urlbook
+              >
+        </div>
+  <button type="submit" class="btn btn-success" >Submit</button> 
+ <button (click)="addBook(namebook.value , urlbook.value)" class="btn btn-success"
+style="margin-bottom: 55px;"> Add</button>
+
+	</form>
+</div>
+  -->
