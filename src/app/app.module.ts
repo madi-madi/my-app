@@ -11,8 +11,8 @@ import { BookComponent } from './book/book.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { OrderbyPipe } from './orderby.pipe';
 // import { AlertComponent } from './alert/alert.component';
-// import { CarouselComponent } from './carousel/carousel.component';
-// import { CarouselItemComponent } from './carousel-item/carousel-item.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselItemComponent } from './carousel-item/carousel-item.component';
 // import { PanelComponent } from './panel/panel.component';
 // import { PanelListComponent } from './panel-list/panel-list.component';
 
@@ -27,8 +27,8 @@ import { OrderbyPipe } from './orderby.pipe';
     BookListComponent,
     OrderbyPipe,
     // AlertComponent,
-    // CarouselComponent,
-    // CarouselItemComponent,
+    CarouselComponent,
+    CarouselItemComponent,
     // PanelComponent,
     // PanelListComponent
   ],
