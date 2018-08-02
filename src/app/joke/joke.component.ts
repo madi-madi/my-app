@@ -28,7 +28,7 @@ export class JokeComponent implements OnChanges,
   constructor() {
   	// this.setup ="Forsan Technology";
         console.log(`constructor: data, ${this.joke}`);
-        // console.log("Constructor A");
+        console.log("Constructor A");
   	// this.punchline= " Angular Cli ";
    }
 
@@ -38,33 +38,33 @@ export class JokeComponent implements OnChanges,
   }
 
   ngOnChanges(changes:SimpleChanges){
-    // console.log(JSON.stringify(changes));
-    // for(let key in changes){ // in used with object
-    //   console.log(`ngOnChanges: key `, key);
-    //   console.log(`ngOnChanges: currentValue `, changes[key].currentValue);
-    //   console.log(`ngOnChanges: previousValue `, changes[key].previousValue);
-    // }
-    // console.log("OnChanges C");
+    console.log(JSON.stringify(changes));
+    for(let key in changes){ // in used with object
+      console.log(`ngOnChanges: key `, key);
+      console.log(`ngOnChanges: currentValue `, changes[key].currentValue);
+      console.log(`ngOnChanges: previousValue `, changes[key].previousValue);
+    }
+    console.log("OnChanges C");
   }
 
   ngAfterContentInit(){
-  // console.log("ngAfterContentInit D");
+  console.log("ngAfterContentInit D");
 
   }
 
   ngAfterContentChecked() {
-    // console.log(`ngAfterContentChecked E`);
+    console.log(`ngAfterContentChecked E`);
   }
 
   ngAfterViewInit() {
-    // console.log(`ngAfterViewInit F`);
+    console.log(`ngAfterViewInit F`);
   }
 
   ngAfterViewChecked() {
-    // console.log(`ngAfterViewChecked G`);
+    console.log(`ngAfterViewChecked G`);
   }
   ngOnDestroy() {
-    // console.log(`ngOnDestroy H`);
+    console.log(`ngOnDestroy H`);
   }
 // delet joke branch delete-joke update
   deleteJoke(val:string){
