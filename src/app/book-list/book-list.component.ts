@@ -9,7 +9,7 @@ import { Book } from '../models/book';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-	bookList : Array<any>;
+	bookList : Array<any>; //booklist 
 
   constructor() {
   	this.bookList = [];
@@ -19,22 +19,20 @@ export class BookListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+//  add new book function book-add-list
   addNewBook(data:Book){
 
   	this.bookList.unshift(data);
   }
-
+//  increment down book
   incrementDownloadBook(data){
     console.log(this.bookList[data].download++);
   }
-
+// decrement down book
   dencrementDownloadBook(data){
     this.bookList[data].download == 0 ? '':this.bookList[data].download--;
   }
 
-  // transform() { // add your object as a parameter to transform()
-  //   //write your code to do the sort
-  // }
+
 
 }

@@ -1,3 +1,4 @@
+//  Class book with brnch book-add-list
 export class Book {
 	name: string;
 	url:string;

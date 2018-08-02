@@ -17,7 +17,7 @@ export class FormBookComponent implements OnInit {
 
   ngOnInit() {
   }
-
+// add new book  and filter url book  and emit 
   addBook(name:string , url:string,download:number){
   	 console.log( "Test");
         if (url.indexOf("//") > -1) {

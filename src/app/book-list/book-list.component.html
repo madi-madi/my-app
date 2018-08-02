@@ -1,4 +1,4 @@
-
+<!-- add book form and for loop on list book book-add-list b -->
 	<app-form-book (bookCreated)="addNewBook($event)"></app-form-book>
 <app-book *ngFor="let book of bookList let i =index"  [book]="{book:book , i:i}"
 (icrementDownload)="incrementDownloadBook($event)" (decrementDownload)="dencrementDownloadBook($event)"></app-book>
