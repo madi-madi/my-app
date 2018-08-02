@@ -1,3 +1,4 @@
+// Class Joke  with  delete-joke or add new joke update
 export class Joke {
 	id: number;
 	setup: string;
