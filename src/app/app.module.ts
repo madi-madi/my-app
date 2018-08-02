@@ -13,8 +13,8 @@ import { OrderbyPipe } from './orderby.pipe';
 // import { AlertComponent } from './alert/alert.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel-item/carousel-item.component';
-// import { PanelComponent } from './panel/panel.component';
-// import { PanelListComponent } from './panel-list/panel-list.component';
+import { PanelComponent } from './panel/panel.component';
+import { PanelListComponent } from './panel-list/panel-list.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,8 @@ import { CarouselItemComponent } from './carousel-item/carousel-item.component';
     // AlertComponent,
     CarouselComponent,
     CarouselItemComponent,
-    // PanelComponent,
-    // PanelListComponent
+    PanelComponent,
+    PanelListComponent
   ],
   imports: [
     BrowserModule,

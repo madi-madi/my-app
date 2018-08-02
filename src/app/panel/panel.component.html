@@ -1,0 +1,13 @@
+
+
+<div class="container">
+<div class="panel-list card-header" (click)="vissable = !vissable" >
+{{panel.panel.titlePanel}}
+	
+</div>
+<div class="panel-list card-body" *ngIf="vissable">
+{{panel.panel.contentPanel}}
+
+</div>
+
+</div>
