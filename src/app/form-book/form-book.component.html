@@ -7,7 +7,7 @@
 	<input type="url" placeholder="http://example.com" class="form-control" #url>
 </div>
 
-<button (click)="addBook(name.value , url.value)" class="btn btn-success"
+<button (click)="addBook(name.value , url.value); name.value=''; url.value='' " class="btn btn-success"
 style="margin-bottom: 55px;"> Add</button>
 
 <br>

@@ -9,6 +9,7 @@ import { Joke } from '../models/joke';
 })
 export class JokeListComponent implements OnInit {
 jokeList: Array<any>;
+selectJoke:Joke;
 
   constructor() { 
 this.jokeList = [

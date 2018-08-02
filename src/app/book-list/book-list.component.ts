@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Pipe, PipeTransform  } from '@angular/core';
 import { Book } from '../models/book';
+
+// @Pipe({ name: 'orderByLast' });
+
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
@@ -12,6 +15,7 @@ export class BookListComponent implements OnInit {
   	this.bookList = [];
 
    }
+
 
   ngOnInit() {
   }
@@ -28,5 +32,9 @@ export class BookListComponent implements OnInit {
   dencrementDownloadBook(data){
     this.bookList[data].download == 0 ? '':this.bookList[data].download--;
   }
+
+  // transform() { // add your object as a parameter to transform()
+  //   //write your code to do the sort
+  // }
 
 }

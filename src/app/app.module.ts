@@ -9,6 +9,12 @@ import { FormComponent } from './form/form.component';
 import { FormBookComponent } from './form-book/form-book.component';
 import { BookComponent } from './book/book.component';
 import { BookListComponent } from './book-list/book-list.component';
+import { OrderbyPipe } from './orderby.pipe';
+// import { AlertComponent } from './alert/alert.component';
+// import { CarouselComponent } from './carousel/carousel.component';
+// import { CarouselItemComponent } from './carousel-item/carousel-item.component';
+// import { PanelComponent } from './panel/panel.component';
+// import { PanelListComponent } from './panel-list/panel-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,13 @@ import { BookListComponent } from './book-list/book-list.component';
     FormComponent,
     FormBookComponent,
     BookComponent,
-    BookListComponent
+    BookListComponent,
+    OrderbyPipe,
+    // AlertComponent,
+    // CarouselComponent,
+    // CarouselItemComponent,
+    // PanelComponent,
+    // PanelListComponent
   ],
   imports: [
     BrowserModule,

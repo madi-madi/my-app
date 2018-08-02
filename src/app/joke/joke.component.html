@@ -10,6 +10,9 @@
 	<button class="btn btn-danger"  (click)="deleteJoke(joke.i)"> Delete </button>
 	
 	<button class="btn btn-info" (click)="joke.joke.toggle()">{{joke.joke.hide?'Hide':'Show'}}</button>
+	  <button class="btn btn-success" (click)="select()">
+    {{ isSelected ? 'Selected' : 'Select'}}
+  </button>
 </div>
 
 </div>
