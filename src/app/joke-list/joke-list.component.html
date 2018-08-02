@@ -1,9 +1,9 @@
 <div>
 	<app-form (jokeCreated)="addNewJoke($event)"></app-form>
-<app-joke *ngFor="let joke of jokeList let i =index"  [joke]="{joke:joke , i:i}" (jokeDeleted)= "deleteJokeEnd($event)" (selectJoke)="selectedJoke = $event" (isSelected)="joke.joke.id === selectedJoke.id" >
-
+<app-joke *ngFor="let joke of jokeList let i =index"  [joke]="{joke:joke , i:i}" (jokeDeleted)= "deleteJokeEnd($event)"> <!-- delete joke emit in deleteJokeEnd -->
     
     
 </app-joke>
 </div>
 
+<!-- (selectJoke)="selectedJoke = $event" (isSelected)="joke.joke.id === selectedJoke.id" -->

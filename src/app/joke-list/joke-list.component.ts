@@ -28,9 +28,9 @@ this.jokeList = [
   	this.jokeList.unshift(val);
   
   }
-
+  // delete Joke branch
     deleteJokeEnd(data){
-    console.log(data);
+    // console.log(data);
     this.jokeList.splice(data ,1);
   }
 

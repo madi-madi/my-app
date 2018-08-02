@@ -18,8 +18,9 @@ export class JokeComponent implements OnChanges,
   // @Output() jokeDeleted = new EventEmitter<Joke>();
 
   // @Input() data: Joke;
-  @Input() isSelected: boolean;
+  // @Input() isSelected: boolean;
   @Output() selectJoke: EventEmitter<Joke> = new EventEmitter<Joke>();
+  //output from joke child to joke-list parent
     @Output() jokeDeleted : EventEmitter<any> = new EventEmitter();
 
 	// setup:string;
@@ -65,15 +66,15 @@ export class JokeComponent implements OnChanges,
   ngOnDestroy() {
     // console.log(`ngOnDestroy H`);
   }
-
+// delet joke branch delete-joke
   deleteJoke(val:string){
     this.jokeDeleted.emit(val);
     console.log(val);
   }
 
-  select() {
-    console.log(this.joke)
-    this.selectJoke.emit(this.joke);
-  }
+  // select() {
+  //   console.log(this.joke)
+  //   this.selectJoke.emit(this.joke);
+  // }
 
 }
