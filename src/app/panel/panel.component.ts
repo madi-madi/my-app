@@ -10,23 +10,38 @@ import { Panel } from '../models/panel';
 })
 export class PanelComponent implements OnInit,
 AfterContentInit {
-    @Output() jokeDeleted : EventEmitter<any> = new EventEmitter();
-  @Input() panel :Panel;
-  @Output() selectPanel: EventEmitter<Panel> = new EventEmitter<Panel>();
 
-    @Output() panelSelected : EventEmitter<any> = new EventEmitter();
+// @Output() jokeDeleted : EventEmitter<any> = new EventEmitter();
+// @Input() panel :Panel;
+// @Output() selectPanel: EventEmitter<Panel> = new EventEmitter<Panel>();
 
-	@ContentChildren(PanelListComponent) panelListComponent: QueryList<PanelListComponent>;
+// @Output() panelSelected : EventEmitter<any> = new EventEmitter();
+
+	@ContentChildren(PanelListComponent) panels: QueryList<PanelListComponent>;
   constructor() { }
 
   ngOnInit() {
   }
 
   ngAfterContentInit(){
-  	console.log(this.panelListComponent.toArray());
+
+  this.panels.toArray().forEach((panel: PanelListComponent) => {
+  // subscribe panel toggle event
+  panel.toggle.subscribe(() => {
+
+    this.openPanel(panel);
+  });
+
+   });
   }
-  selected(val){
-    console.log(val);
-    this.selectPanel.emit(val);
-  }
+
+
+  openPanel(panel: PanelListComponent) {
+  // close all panels
+  this.panels.toArray().forEach(panel => panel.isOpen = false);
+   // open the selected panel
+  panel.isOpen = true;
+  
+
+}
 }
