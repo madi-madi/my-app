@@ -15,7 +15,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel-item/carousel-item.component';
 import { PanelComponent } from './panel/panel.component';
 import { PanelListComponent } from './panel-list/panel-list.component';
-// import { ForsanDirective } from './forsan.directive';
+import { ForsanDirective } from './forsan.directive';
 
 @NgModule({
   declarations: [
