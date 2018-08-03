@@ -1,3 +1,4 @@
+
 import { Component, OnInit ,Input, EventEmitter,Output} from '@angular/core';
 import { Panel } from '../models/panel';
 
