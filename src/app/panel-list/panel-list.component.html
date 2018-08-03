@@ -1,4 +1,9 @@
+<div class="panel-list card-header" (click)="toggle.emit()" >
+<ng-content selected="h3"></ng-content>
+	
+</div>
+<div class="panel-list card-body" *ngIf="isOpen">
+<ng-content selected="p"></ng-content>
 
-<app-panel *ngFor="let panel of panelList let i=index" [panel]={panel:panel,i:i}
-></app-panel>
 
+</div>

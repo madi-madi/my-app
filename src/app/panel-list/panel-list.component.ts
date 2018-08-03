@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Panel } from '../models/panel';
 
 @Component({
@@ -7,7 +8,8 @@ import { Panel } from '../models/panel';
   styleUrls: ['./panel-list.component.css']
 })
 export class PanelListComponent implements OnInit {
-  vissable:boolean = false;	
+  @Input() isOpen:boolean = false;	
+  @Output() toggle: EventEmitter<any> = new EventEmitter<any>();
   data:string;
   panelList: Array<Panel>;
 
