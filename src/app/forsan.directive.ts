@@ -1,7 +1,8 @@
 import { Directive,ElementRef,Renderer,HostListener,HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[Forsan]'
+  selector: '[Forsan]',
+  exportAs: 'Forsan'
 })
 export class ForsanDirective {
 
@@ -31,8 +32,9 @@ export class ForsanDirective {
  // @HostListener('mouseover') onMoustover(){
  //   let nameSection = this.el.nativeElement.querySelector('.card-body');
  //   this.render.setElementStyle(nameSection,'fontSize','25px');
- // }
-
+ // } 
+ // add classess to  this item
+  @HostBinding('attr.class') cssClass = 'ui message';
  // @HostBinding('class.card-body')private ishovering :boolean;
 
 }

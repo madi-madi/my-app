@@ -10,6 +10,9 @@ import { Panel } from '../models/panel';
 })
 export class PanelComponent implements OnInit,
 AfterContentInit {
+  characters: string[] = ['A', 'B', 'C', 'D'];
+  isBordered: boolean=true;
+
 
 // @Output() jokeDeleted : EventEmitter<any> = new EventEmitter();
 // @Input() panel :Panel;
@@ -19,7 +22,8 @@ AfterContentInit {
 
 	@ContentChildren(PanelListComponent) panels: QueryList<PanelListComponent>;
   constructor() { }
-
+    color:string;
+    fontSize:string;
   ngOnInit() {
   }
 
@@ -43,5 +47,11 @@ AfterContentInit {
   panel.isOpen = true;
   
 
+}
+
+applyStyle(color ,fontSize):void{
+  console.log(`${ color}  ${fontSize}`);
+  this.color = color;
+  this.fontSize = fontSize;
 }
 }

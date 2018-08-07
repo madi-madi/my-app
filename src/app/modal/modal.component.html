@@ -1,0 +1,27 @@
+<!-- Trigger/Open The Modal -->
+<div class="container" >
+	<div class="row">
+	<!-- The Modal -->
+
+	<div [@ngModal] id="myModal" class="modal" *ngIf="visible"  >
+
+	<!-- Modal content -->
+	<div class="modal-content col-md-6 offset-md-3" appNgmodal (mouseleave)="close()" >
+	<header class="modal-header col-md-12  alert alert-info">
+	<ng-content select="h3"></ng-content>
+	<span class="close float-left col-1"  (click)="close()" >&times;</span>
+	</header>
+	<div class="lead modal-content-p">
+		<ng-content select="p"></ng-content>
+	</div>
+	<footer class="col-md-12 alert alert-info">
+	<div class="col-2" [style.margin-bottom.px]="5">
+		<img src="assets/img/logo-forsan.png" alt="Forsan Technolgy" class="float-left">
+	</div> 
+	<p class="float-left lead col-8" [style.color]="'#fff'"> Forsan Technology </p> 
+	<button class="btn btn-danger col-2" (click)="close()"> Close</button>
+	</footer>
+	</div>
+	</div>
+	</div>
+</div>

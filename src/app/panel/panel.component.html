@@ -5,4 +5,36 @@
 <ng-content></ng-content>
 
 
+<div [ngStyle]="{color:'#fff','background-color':'#f00'}">
+	 ngStyle : color #fff , bacground-color #f00
+</div>
+<hr>
+
+<div [style.background-color]="'#f00'">
+	 [style.background-color] #f00
+</div>
+<br>
+<br>
+
+<div class="content">
+	<div class="form-group">
+		<input type="color" name="color" [(ngModel)]="color" #colorEl class="form-control"
+		value="{{color}}">
+	</div>
+	<div class="form-group">
+		<input type="text" name="fontSize" [(ngModel)]="fontSize" #fontSizeEl class="form-control"
+		value="{{fontSize}}">
+	</div>
+
+	        <span [ngStyle]="{color: color}"
+              [style.font-size.px]="fontSize">
+          red text
+        </span>
+       <button (click)="applyStyle(colorEl.value,fontSizeEl.value)">
+        Apply Styles
+      </button>
+</div>
+ <ol>
+ 	<li *ngFor="let chat of characters" [ngSwitch]="chat" name="chat" [ngClass]="{lead:isBordered}">{{chat}}</li>
+ </ol>
 </div>

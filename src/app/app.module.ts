@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule  }   from '@angular/forms';
 import { NgModule } from '@angular/core';
 
@@ -17,6 +18,16 @@ import { PanelComponent } from './panel/panel.component';
 import { PanelListComponent } from './panel-list/panel-list.component';
 import { ForsanDirective } from './forsan.directive';
 import { SearchComponent } from './search/search.component';
+// import { ContentComponent } from './content/content.component';
+// import { ContentTabComponent } from './content-tab/content-tab.component';
+// import { ContentTabSetComponent } from './content-tab-set/content-tab-set.component';
+// import { ContentTabDemoComponent } from './content-tab-demo/content-tab-demo.component';
+import { ModalComponent } from './modal/modal.component';
+import { DmodalDirective } from './dmodal.directive';
+import { CollapseComponent } from './collapse/collapse.component';
+import { DemoComponent } from './demo/demo.component';
+import { NgmodalDirective } from './ngmodal.directive';
+import { NgformComponent } from './ngform/ngform.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +45,23 @@ import { SearchComponent } from './search/search.component';
     PanelComponent,
     PanelListComponent,
     ForsanDirective,
-    SearchComponent
+    SearchComponent,
+    // ContentComponent,
+    // ContentTabComponent,
+    // ContentTabSetComponent,
+    // ContentTabDemoComponent,
+    ModalComponent,
+    DmodalDirective,
+    CollapseComponent,
+    DemoComponent,
+    NgmodalDirective,
+    NgformComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

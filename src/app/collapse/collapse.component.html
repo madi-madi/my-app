@@ -1,0 +1,21 @@
+<div class="container">
+	<!-- <div class="row">		 -->
+
+	<div class="panel-list card-header" (click)="isOpen = !isOpen">
+	{{collapse.name}}
+
+	</div>
+	<div class="panel-list card-body" *ngIf="isOpen">
+	<!-- <p class="lead">{{collapse.desc}}</p> -->
+	<button id="myBtn" class="btn btn-info" (click)="showModal =!showModal" >Show</button>
+
+	<app-modal [visible]="showModal" (visibleChange)="change($event)" [mcollapse]='collapse'>
+	<h3 class="col-11"> {{collapse.name}} </h3>
+
+	<p>{{collapse.desc}}</p>
+
+	</app-modal>
+
+<!-- 	</div> -->
+	</div>
+</div>
