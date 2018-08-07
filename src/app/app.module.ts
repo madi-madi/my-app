@@ -27,7 +27,7 @@ import { DmodalDirective } from './dmodal.directive';
 import { CollapseComponent } from './collapse/collapse.component';
 import { DemoComponent } from './demo/demo.component';
 import { NgmodalDirective } from './ngmodal.directive';
-import { NgformComponent } from './ngform/ngform.component';
+// import { NgformComponent } from './ngform/ngform.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +55,7 @@ import { NgformComponent } from './ngform/ngform.component';
     CollapseComponent,
     DemoComponent,
     NgmodalDirective,
-    NgformComponent
+    // NgformComponent
   ],
   imports: [
     BrowserModule,
