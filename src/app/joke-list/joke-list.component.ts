@@ -25,6 +25,7 @@ this.jokeList = [
   }
 
   addNewJoke(val:Joke){
+    console.info(" JOKE "+val);
   	this.jokeList.unshift(val);
   
   }

@@ -1,14 +1,51 @@
 <div class="container">
 	<h1> Add New Joke</h1>
+<form novalidate [formGroup]="myform"  (ngSubmit)="onSubmit()">
 <div  class="form-group">
-	<input type="text" placeholder="Setup" class="form-control" #setup>
+	<input 
+	type="text" 
+	placeholder="Setup" 
+	class="form-control"
+	[ngClass]="{
+	'is-invalid': setup.invalid && 
+	(setup.dirty || setup.touched),
+	'is-valid': setup.valid &&
+	(setup.valid && setup.dirty)
+	}" 
+	formControlName="setup">
+<div class="invalid-feedback"*ngIf="setup.invalid 
+&&(setup.dirty|| setup.touched)">
+<figcaption *ngIf="setup.errors.required"> Setup required 
+</figcaption>
+
+</div>
 </div>
 <div class="form-group">
-	<input type="text" placeholder="Punchline" class="form-control" #punchline>
+	<input 
+	type="text" 
+	placeholder="Punchline" 
+	class="form-control"
+	[ngClass]="{
+	'is-invalid': punchline.invalid && 
+	(punchline.dirty || punchline.touched),
+	'is-valid': punchline.valid &&
+	(punchline.valid && punchline.dirty)
+	}" 
+	formControlName="punchline">
+<div class="invalid-feedback"*ngIf="punchline.invalid 
+&&(punchline.dirty|| punchline.touched)">
+<figcaption *ngIf="punchline.errors.required"> Setup required 
+</figcaption>
+
+</div>
 </div>
 
-<button (click)="addJoke(setup.value , punchline.value)" class="btn btn-success"
-style="margin-bottom: 55px;"> Add</button>
-
+<button 
+class="btn btn-success" 
+type="submit"
+[disabled]="myform.invalid"
+style="margin-bottom: 55px;"
+> Add</button>
+</form>
 <br>
 </div>

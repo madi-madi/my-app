@@ -28,6 +28,9 @@ import { CollapseComponent } from './collapse/collapse.component';
 import { DemoComponent } from './demo/demo.component';
 import { NgmodalDirective } from './ngmodal.directive';
 import { NgformComponent } from './ngform/ngform.component';
+import { NgformModelFunctionltyComponent } from './ngform-model-functionlty/ngform-model-functionlty.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { EmailDominDirective } from './email-domin.directive';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,10 @@ import { NgformComponent } from './ngform/ngform.component';
     CollapseComponent,
     DemoComponent,
     NgmodalDirective,
-    NgformComponent
+    NgformComponent,
+    NgformModelFunctionltyComponent,
+    TemplateDrivenFormComponent,
+    EmailDominDirective
   ],
   imports: [
     BrowserModule,
