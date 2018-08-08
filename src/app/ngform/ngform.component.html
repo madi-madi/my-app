@@ -1,0 +1,93 @@
+<div class="container">
+	<div class="col-md-10 offset-1">
+		<pre>{{myform.value | json}}</pre>
+		<form novalidate [formGroup]="myform"  (ngSubmit)="onSubmit()">
+		<fieldset formGroupName = "name">
+		<div class="form-group">
+		<label>First Name</label>
+		<input type="text"
+		class="form-control"
+		formControlName="firstName"
+		[ngClass]="{
+		'is-invalid': myform.controls.name.controls.firstName.invalid && 
+		(myform.controls.name.controls.firstName.dirty || myform.controls.name.controls.firstName.touched),
+		'is-valid': myform.controls.name.controls.firstName && 
+		(myform.controls.name.controls.firstName.valid && myform.controls.name.controls.firstName.dirty)
+		}"
+		>
+		<div class="invalid-feedback" *ngIf="myform.controls.name.controls.firstName.invalid && 
+		(myform.controls.name.controls.firstName.dirty || myform.controls.name.controls.firstName.touched)">
+		<figcaption *ngIf="myform.controls.name.controls.firstName.errors.required"> firstName required 
+		</figcaption>
+		</div>
+
+		</div>
+		<div class="form-group">
+		<label>Last Name</label>
+		<input type="text"
+		class="form-control"
+		formControlName="lastName"
+		[ngClass]="{
+		'is-invalid': myform.controls.name.controls.lastName.invalid && 
+		(myform.controls.name.controls.lastName.dirty || myform.controls.name.controls.lastName.touched),
+		'is-valid': myform.controls.name.controls.lastName && 
+		(myform.controls.name.controls.lastName.valid && myform.controls.name.controls.lastName.dirty)
+		}"
+		>
+		<div class="invalid-feedback" *ngIf="myform.controls.name.controls.lastName.invalid && 
+		(myform.controls.name.controls.lastName.dirty || myform.controls.name.controls.lastName.touched)">
+		<figcaption *ngIf="myform.controls.name.controls.lastName.errors.required"> lastName required 
+		</figcaption>
+		</div>
+		</div>
+		</fieldset>
+		<div class="form-group">
+		<label>Email</label>
+		<input type="email"
+		class="form-control" 
+		formControlName="email"
+		[ngClass]="{
+		'is-invalid': myform.controls.email.invalid && (myform.controls.email.dirty || myform.controls.email.touched),
+		'is-valid': myform.controls.email && (myform.controls.email.valid && myform.controls.email.dirty)
+		}"
+		>
+		<div class="invalid-feedback" *ngIf="myform.controls.email.invalid && (myform.controls.email.dirty || myform.controls.email.touched)">
+		<figcaption *ngIf="myform.controls.email.errors.email"> Invalid Email </figcaption>
+		<figcaption *ngIf="myform.controls.email.errors.required"> Email required </figcaption>
+		</div>
+		</div>
+		<div class="form-group">
+		<label>Password</label>
+		<input type="password"
+		class="form-control" 
+		formControlName="password"
+		[ngClass]="{
+		'is-invalid': myform.controls.password.invalid && (myform.controls.password.dirty || myform.controls.password.touched),
+		'is-valid': myform.controls.password && (myform.controls.password.valid && myform.controls.password.dirty)
+		}"
+		>
+		<div class="invalid-feedback" *ngIf="myform.controls.password.invalid && (myform.controls.password.dirty || myform.controls.password.touched)">
+		<figcaption *ngIf="myform.controls.password.errors.minlength"> 
+		Password must be at least 6 characters , remeaning 
+		{{myform.controls.password.errors.minlength.requiredLength - myform.controls.password.errors.minlength.actualLength}}
+		</figcaption>
+		<figcaption *ngIf="myform.controls.password.errors.required"> password required </figcaption>
+		</div>
+		</div>
+		<div class="form-group">
+		<label>Language</label>
+		<select class="form-control" formControlName="language">
+		<option *ngFor="let lang of langs" [value]="lang">{{lang}}</option>
+		</select>
+		</div>
+		<div class="form-group">
+		<button 
+		class="btn btn-info" 
+		type="submit"
+		[disabled]="myform.invalid">
+		Submit
+		</button>
+		</div>
+		</form>
+	</div>
+</div>
